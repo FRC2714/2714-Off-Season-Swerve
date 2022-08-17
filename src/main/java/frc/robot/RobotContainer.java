@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants.OIConstants;
 import edu.wpi.first.wpilibj.Joystick;
 import frc.robot.commands.JoystickCommand;
+import frc.robot.commands.auto.SCurve;
 import frc.robot.subsystems.SwerveSubsystem;
 
 /**
@@ -51,8 +52,8 @@ public class RobotContainer {
    *
    * @return the command to run in autonomous
    */
-  public Command getAutonomousCommand() {
-    // An ExampleCommand will run in autonomous
-    return null;
-  }
+  public Command getSCurveAuto() {
+		return new SCurve(swerveSubsystem);
+	}
 }
+
