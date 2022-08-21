@@ -78,10 +78,10 @@ public final class Constants {
 
         public static final double degToRad = Math.PI/180;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = -22.500 * degToRad; // TODO: set value
-        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = -94.219 * degToRad; // TODO: set value
-        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = -43.318 * degToRad; // TODO: set value
-        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 158.555 * degToRad; // TODO: set value
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
+        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
+        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
+        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
 
         public static final double kPhysicalMaxSpeedMetersPerSecond = 5;
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
