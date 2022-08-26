@@ -28,7 +28,7 @@ public final class Constants {
         public static final double kTurningEncoderRot2Rad = kTurningMotorGearRatio * 2 * Math.PI;
         public static final double kDriveEncoderRPM2MeterPerSec = kDriveEncoderRot2Meter / 60;
         public static final double kTurningEncoderRPM2RadPerSec = kTurningEncoderRot2Rad / 60;
-        public static final double kTurnP = 0.5;
+        public static final double kTurnP = 0.3;
         public static final double kDriveP = 0.5;
     }
 
@@ -56,10 +56,10 @@ public final class Constants {
         public static final int kFrontRightTurningMotorPort = 5;
         public static final int kBackRightTurningMotorPort = 3;
 
-        public static final boolean kFrontLeftTurningEncoderReversed = true;
-        public static final boolean kBackLeftTurningEncoderReversed = true;
-        public static final boolean kFrontRightTurningEncoderReversed = true;
-        public static final boolean kBackRightTurningEncoderReversed = true;
+        public static final boolean kFrontLeftTurningEncoderReversed = false;
+        public static final boolean kBackLeftTurningEncoderReversed = false;
+        public static final boolean kFrontRightTurningEncoderReversed = false;
+        public static final boolean kBackRightTurningEncoderReversed = false;
 
         public static final boolean kFrontLeftDriveEncoderReversed = true;
         public static final boolean kBackLeftDriveEncoderReversed = true;
@@ -78,15 +78,14 @@ public final class Constants {
 
         public static final double degToRad = Math.PI/180;
 
-        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
-        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
-        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
-        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 0 * degToRad; // TODO: set value
-
-        public static final double kPhysicalMaxSpeedMetersPerSecond = 5;
+        public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = 160.225 * degToRad; // TODO: set value
+        public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = 88.945 * degToRad; // TODO: set value
+        public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = 316.758 * degToRad; // TODO: set value
+        public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 158.818 * degToRad; // TODO: idk use java math class
+        public static final double kPhysicalMaxSpeedMetersPerSecond = 5.8;
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
 
-        public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond / 4;
+        public static final double kTeleDriveMaxSpeedMetersPerSecond = kPhysicalMaxSpeedMetersPerSecond / 2;
         public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = //
                 kPhysicalMaxAngularSpeedRadiansPerSecond / 4;
         public static final double kTeleDriveMaxAccelerationUnitsPerSecond = 3;
