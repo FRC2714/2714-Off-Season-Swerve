@@ -86,7 +86,7 @@ public final class Constants {
         public static final double kBackRightDriveAbsoluteEncoderOffsetRad = 158.818 * degToRad; // TODO: set value
 
         //Physical
-        public static final double kPhysicalMaxSpeedMetersPerSecond = 6.4;
+        public static final double kPhysicalMaxSpeedMetersPerSecond = 5.8;
         public static final double kPhysicalMaxAngularSpeedRadiansPerSecond = 2 * 2 * Math.PI;
 
         //Speed and Accel
