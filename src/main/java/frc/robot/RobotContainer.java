@@ -14,38 +14,46 @@ import frc.robot.commands.auto.SCurve;
 import frc.robot.subsystems.SwerveSubsystem;
 
 /**
- * This class is where the bulk of the robot should be declared. Since Command-based is a
- * "declarative" paradigm, very little robot logic should actually be handled in the {@link Robot}
- * periodic methods (other than the scheduler calls). Instead, the structure of the robot (including
+ * This class is where the bulk of the robot should be declared. Since
+ * Command-based is a
+ * "declarative" paradigm, very little robot logic should actually be handled in
+ * the {@link Robot}
+ * periodic methods (other than the scheduler calls). Instead, the structure of
+ * the robot (including
  * subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
 
-    private final SwerveSubsystem swerveSubsystem = new SwerveSubsystem();
-    private final Joystick driverJoystick = new Joystick(OIConstants.kDriverControllerPort);
-
+  private final SwerveSubsystem swerveSubsystem = new SwerveSubsystem();
+  private final Joystick driverJoystick = new Joystick(OIConstants.kDriverControllerPort);
 
   // The robot's subsystems and commands are defined here...
 
-  /** The container for the robot. Contains subsystems, OI devices, and commands. */
+  /**
+   * The container for the robot. Contains subsystems, OI devices, and commands.
+   */
   public RobotContainer() {
+    boolean fieldRelative = true;
     swerveSubsystem.setDefaultCommand(new JoystickCommand(
-      swerveSubsystem,
-      () -> -driverJoystick.getRawAxis(OIConstants.kDriverYAxis),
-      () -> driverJoystick.getRawAxis(OIConstants.kDriverXAxis),
-      () -> driverJoystick.getRawAxis(OIConstants.kDriverRotAxis),
-      () -> !driverJoystick.getRawButton(OIConstants.kDriverFieldOrientedButtonIdx)));
+        swerveSubsystem,
+        () -> -driverJoystick.getRawAxis(OIConstants.kDriverYAxis),
+        () -> driverJoystick.getRawAxis(OIConstants.kDriverXAxis),
+        () -> driverJoystick.getRawAxis(OIConstants.kDriverRotAxis), 
+        fieldRelative));
 
     configureButtonBindings();
   }
 
   /**
-   * Use this method to define your button->command mappings. Buttons can be created by
+   * Use this method to define your button->command mappings. Buttons can be
+   * created by
    * instantiating a {@link GenericHID} or one of its subclasses ({@link
-   * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
+   * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing
+   * it to a {@link
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
-  private void configureButtonBindings() {}
+  private void configureButtonBindings() {
+  }
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
@@ -53,7 +61,6 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getSCurveAuto() {
-		return new SCurve(swerveSubsystem);
-	}
+    return new SCurve(swerveSubsystem);
+  }
 }
-
